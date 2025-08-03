@@ -1,24 +1,9 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useRef, useEffect } from "react"
-import { Space_Grotesk, JetBrains_Mono, Rubik } from "next/font/google"
+import { spaceGrotesk, jetbrainsMono, rubik } from "@/app/fonts";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "700", "800"],
-})
-
-const rubik = Rubik({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-})
 
 interface Color {
   hex: string
@@ -340,8 +325,8 @@ export default function ColorExtractor() {
                   <div className="w-8 h-8 bg-white"></div>
                 </div>
                 <div>
-                  <p className={`font-black text-xs mb-2 tracking-widest ${jetbrainsMono.className}`}>DROP IMAGE</p>
-                  <p className={`font-bold text-xs opacity-70 ${rubik.className}`}>CLICK OR PASTE (CTRL+V)</p>
+                  <p className={`font-black text-xs mb-2 tracking-widest ${jetbrainsMono.className}`}>Drop Image</p>
+                  <p className={`font-bold text-xs opacity-70 ${jetbrainsMono.className}`}>Or Paste (⌘+V)</p>
                 </div>
               </div>
             )}

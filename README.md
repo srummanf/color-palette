@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2d660b49-8faa-437a-8b7d-79859868e491/deploy-status)](https://app.netlify.com/projects/color-palette-gen-from-image/deploys)
 
+![1754230951531](image/README/1754230951531.png)
+
 A brutalist-designed web application that extracts dominant color palettes from images using advanced computer vision algorithms. Built with Next.js and TypeScript, featuring a bold black-and-white interface with industrial typography.
 
 ## Features
@@ -12,7 +14,6 @@ A brutalist-designed web application that extracts dominant color palettes from 
 - **Instant Copy**: Click any color to copy to clipboard
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
 - **Brutalist UI**: Bold, industrial design with harsh contrasts and geometric typography
-
 
 ## Algorithm Overview
 
@@ -29,14 +30,14 @@ flowchart TD
 
     C --> C1[Extract RGB Values]
     C --> C2[Skip Transparent Pixels]
-    
+  
     D --> D1[Group Similar Colors<br/>15-point intervals]
     D --> D2[Count Frequencies]
-    
+  
     E --> E1[Frequency Score<br/>Coverage percentage]
     E --> E2[Visual Impact Score<br/>Saturation + Colorfulness]
     E --> E3[Final Score<br/>Balanced weighting]
-    
+  
     F --> F1[Sort by Score]
     F --> F2[Ensure Color Diversity<br/>Min distance: 40]
     F --> F3[Adaptive Selection]
@@ -67,25 +68,25 @@ flowchart TD
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/image-palette.git
    cd image-palette
    ```
-
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
    yarn install
    ```
-
 3. **Run development server**
+
    ```bash
    npm run dev
    # or
    yarn dev
    ```
-
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
@@ -99,20 +100,21 @@ npm start
 ## Usage
 
 1. **Upload an Image**:
+
    - Click the upload area
    - Drag and drop an image
    - Paste an image using `Ctrl+V` (or `Cmd+V` on Mac)
-
 2. **Extract Colors**:
+
    - The algorithm automatically processes your image
    - Wait for the "ANALYZING..." phase to complete
-
 3. **Copy Colors**:
+
    - Click any color swatch to copy HEX value
    - Click HEX button to copy HEX format
    - Click RGB button to copy RGB format
-
 4. **Download JSON**: Click the button to download the colors in JSON Format.
+
 ```json
    {
   "colors": [
@@ -161,24 +163,6 @@ npm start
 - **Interior Design**: Generate palettes from room photos
 - **Marketing**: Ensure brand consistency across materials
 
-## Configuration
-
-### Customizing the Algorithm
-
-You can modify the extraction behavior by adjusting these parameters in the `extractDominantColors` function:
-
-```typescript
-// Color grouping precision (lower = more precise)
-const groupingInterval = 15
-
-// Minimum color distance for diversity
-const minDistance = 40
-
-// Visual impact weights
-const saturationBonus = 1.3  // For saturated colors
-const colorfulnessBonus = 1.2  // For non-grayscale colors
-```
-
 ## Contributing
 
 1. Fork the repository
@@ -191,13 +175,11 @@ const colorfulnessBonus = 1.2  // For non-grayscale colors
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
 ---
 
-**⚡Extract dominant colors from any image.**
+# ⚡Extract dominant colors from any image.
 
 ---
-
 
 <table>
   <tr>
