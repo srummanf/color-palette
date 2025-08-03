@@ -41,10 +41,6 @@ flowchart TD
     F --> F1[Sort by Score]
     F --> F2[Ensure Color Diversity<br/>Min distance: 40]
     F --> F3[Adaptive Selection]
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style G fill:#9f9,stroke:#333,stroke-width:2px
-    style E fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
 ### Algorithm Details
